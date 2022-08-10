@@ -5,16 +5,16 @@ cd(@__DIR__)
 df = DataFrame(CSV.File("../data/fuel2001.csv"))
 
 # visualize data
-scatter(df.Pop, df.FuelC)
+scatter(df.Pop, df.FuelC, legend = :none)
 savefig("../fig/pop-fuelc.pdf")
 
-scatter(df.Miles, df.FuelC)
+scatter(df.Miles, df.FuelC, legend = :none)
 savefig("../fig/miles-fuelc.pdf")
 
-scatter(df.Income, df.FuelC)
+scatter(df.Income, df.FuelC, legend = :none)
 savefig("../fig/income-fuelc.pdf")
 
-scatter(df.Tax, df.FuelC)
+scatter(df.Tax, df.FuelC, legend = :none)
 savefig("../fig/tax-fuelc.pdf")
 
 # process data
@@ -26,16 +26,16 @@ df.Fuel = Fuel
 df.Dlic = Dlic
 df.Logmiles = Logmiles
 
-scatter(df.Tax, df.Fuel)
+scatter(df.Tax, df.Fuel, legend = :none)
 savefig("../fig/tax-fuel.pdf")
 
-scatter(df.Dlic, df.Fuel)
+scatter(df.Dlic, df.Fuel, legend = :none)
 savefig("../fig/dlic-fuel.pdf")
 
-scatter(df.Income, df.Fuel)
+scatter(df.Income, df.Fuel, legend = :none)
 savefig("../fig/income-fuel.pdf")
 
-scatter(df.Logmiles, df.Fuel)
+scatter(df.Logmiles, df.Fuel, legend = :none)
 savefig("../fig/logmiles-fuel.pdf")
 
 # fit model
